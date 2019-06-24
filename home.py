@@ -16,7 +16,7 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
 
-class Comment(db.Model):
+class Email(db.Model):
 
     __tablename__ = "emails"
 
@@ -24,13 +24,13 @@ class Comment(db.Model):
     content = db.Column(db.String(4096))
 
 
-email = []
-
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == "GET":
-        return render_template("landing_page.html", email=email)
+        return render_template("landing_page.html", email=Email.query.all())
 
-    email.append(request.form['contents'])
-    return redirect(url_for(index))
+    email = Email(content=request.form['contents'])
+    db.session.add(email)
+    db.session.commit()
+    return redirect(url_for('index'))
 

@@ -14,15 +14,28 @@
 			<div class="col-6">
 				<h1 class="display-4">Safe Blanket</h1>
   		<h2 class="display-4">Keep Your Loved Ones Safe</h2>
-  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus iaculis lectus turpis, nec ultrices nunc suscipit sit amet. Phasellus at diam eget sem finibus luctus. Duis ac quam ornare, tempor turpis sit amet, laoreet quam. Mauris sit amet consequat massa, vel malesuada ante. Nullam aliquet purus id urna vestibulum blandit. Fusce in mollis massa. Donec viverra nisl ac dui ullamcorper, nec suscipit dolor blandit.</p>
+  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus iaculis lectus turpis, nec ultrices nunc suscipit sit amet.
+  		Phasellus at diam eget sem finibus luctus.
+  		Duis ac quam ornare, tempor turpis sit amet, laoreet quam. Mauris sit amet consequat massa, vel malesuada ante.
+  		Nullam aliquet purus id urna vestibulum blandit. Fusce in mollis massa. Donec viverra nisl ac dui ullamcorper, nec suscipit dolor blandit.</p>
+
+		  <div class="container">
+
+            {% for email in emails %}
+                <div class="row">
+                    {{ email.content }}
+                </div>
+            {% endfor %}
+
 		  <form action="." method="POST" class="input-group">
-		        <input type="email" class="form-control" placeholder="Email me when Safe Blanket is ready!" aria-label="Recipient's username" aria-describedby="button-addon2">
+		        <input type="email" class="form-control" name='contents' placeholder="Email me when Safe Blanket is ready!" aria-label="Recipient's username" aria-describedby="button-addon2">
         		  <div class="input-group-append">
-        		    <button class="btn btn-primary" type="submit" id="button-addon2">Send</button>
+        		    <button class="btn btn-primary" type="submit" value="Post email" id="button-addon2">Send</button>
         		  </div>
         		  </form>
+		  </div>
 		</div>
-			</div>
+		</div>
 			<div class="col-6">
 				<img class="secondimg" src="images/tim-bish-171738-unsplash.jpg">
 			</div>
