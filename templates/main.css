@@ -1,0 +1,28 @@
+.background_img {
+background-image: url(tim-bish-171738-unsplash.jpg);
+height: 600px;
+background-size: cover;
+padding: 60px;
+}
+
+.nav {
+	height: 60px;
+	width: max-width;
+}
+
+.nav-item {
+	text-align: center;
+}
+
+.secondimg{
+/*	background-size: cover;*/
+object-fit: contain;
+}
+
+/*.col-sm {
+	flex-grow: 0;
+}*/
+
+.col-6 {
+	height: 800px;
+}
