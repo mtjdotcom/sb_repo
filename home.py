@@ -1,7 +1,6 @@
 from flask import Flask, redirect, render_template, request, url_for
 from flask_sqlalchemy import SQLAlchemy
 
-
 app = Flask(__name__)
 
 app.config["DEBUG"] = True
@@ -16,6 +15,14 @@ app.config["SQLALCHEMY_POOL_RECYCLE"] = 299
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
+
+class Comment(db.Model):
+
+    __tablename__ = "emails"
+
+    id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.String(4096))
+
 
 email = []
 
