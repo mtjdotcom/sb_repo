@@ -1,15 +1,16 @@
 from flask import Flask, redirect, render_template, request, url_for
 from flask_sqlalchemy import SQLAlchemy
+import login_details
 
 app = Flask(__name__)
 
 app.config["DEBUG"] = True
 
 SQLALCHEMY_DATABASE_URI = "mysql+mysqlconnector://{username}:{password}@{hostname}/{databasename}".format(
-    username="mtjdotcom",
-    password="bigbutts.com",
-    hostname="mtjdotcom.mysql.pythonanywhere-services.com",
-    databasename="mtjdotcom$emails",)
+    username=login_details.username,
+    password=login_details.password,
+    hostname=login_details.hostname,
+    databasename=login_details.databasename,)
 app.config["SQLALCHEMY_DATABASE_URI"] = SQLALCHEMY_DATABASE_URI
 app.config["SQLALCHEMY_POOL_RECYCLE"] = 299
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
