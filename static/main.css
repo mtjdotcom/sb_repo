@@ -6,6 +6,11 @@ img {
 }
 
 /*@todo define $spacer in SCSS*/
-.pt-40 {
-    padding-top: 40px;
+.p-40 {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.match_picture_background {
+    background-color: #F1F0F5;
 }

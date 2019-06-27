@@ -5,14 +5,25 @@
     <title>Safe Blanket</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="static/main.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142853226-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+         gtag('config', 'UA-142853226-1');
+    </script>
 </head>
 <body>
-    <div class="container pt-40">
-        <div class="row align-items-center">  
+<!--     <div class="container pt-40"> -->
+        <div>
+        <div class="row align-items-center match_picture_background p-40">  
             <div class="col-12 col-sm-6">
-                <h1 class="display-4">Safe Blanket</h1>
-                <h2 class="display-4">Keep Your Loved Ones Safe</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus iaculis lectus turpis, nec ultrices nunc suscipit sit amet.</p>
+                <h2 class="display-4">Keep Your Loved Ones Safe with SafeBlanket</h2>
+                <blockquote class="blockquote text-center">
+                    <p class="lead">We currently use a prototype of the SafeBlanket in our hospital to restrain, comfort and de-escalate potentially dangerous situations. SafeBlanket is a tool we use multiple times each day. We could not practice without it. Our goal is to spread this valuable tool to other families in need.</p>
+                      <footer class="blockquote-footer">Evan Goodman, R.N. </footer>
+                </blockquote>
                 <!-- python -->
                 {% for email in emails %}
                     <div class="row">
@@ -27,7 +38,7 @@
                 </form>
             </div> <!-- col-6 end -->
             <div class="col-12 col-sm-6">
-                <img src="static/tim-bish-171738-unsplash.jpg">
+                <img src="static/evan_1.jpg">
             </div> <!-- col-6 end -->
         </div> <!-- row end -->                
     </div> <!-- container end -->
