@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Safe Blanket</title>
+    <title>SafeBlanket</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="static/main.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -17,18 +17,18 @@
 <body>
 <!--     <div class="container pt-40"> -->
         <div>
-        <div class="row align-items-center match_picture_background p-40">  
+        <div class="row align-items-center match_picture_background p-40">
             <div class="col-12 col-sm-6">
                 <h2 class="display-4">Keep Your Loved Ones Safe with SafeBlanket</h2>
                 <blockquote class="blockquote text-center">
-                    <p class="lead">We currently use a prototype of the SafeBlanket in our hospital to restrain, comfort and de-escalate potentially dangerous situations. SafeBlanket is a tool we use multiple times each day. We could not practice without it. Our goal is to spread this valuable tool to other families in need.</p>
+                    <p class="lead">We currently use a prototype of the SafeBlanket in our hospital to restrain, comfort and de-escalate potentially dangerous situations. SafeBlanket is a tool we use multiple times a day. We could not practice without it. Our goal is to spread this valuable tool to families in need.</p>
                       <footer class="blockquote-footer">Evan Goodman, R.N. </footer>
                 </blockquote>
                 <!-- python -->
                 {% for email in emails %}
                     <div class="row">
                         {{ email.content }}
-                    </div>  
+                    </div>
                 {% endfor %}
                 <form action="." method="POST" class="input-group">
                     <input type="email" class="form-control" name='contents' placeholder="Email me when Safe Blanket is ready!" aria-label="Recipient's username" aria-describedby="button-addon2">
@@ -40,7 +40,7 @@
             <div class="col-12 col-sm-6">
                 <img src="static/evan_1.jpg">
             </div> <!-- col-6 end -->
-        </div> <!-- row end -->                
+        </div> <!-- row end -->
     </div> <!-- container end -->
 </body>
 </html>
