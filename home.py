@@ -27,7 +27,7 @@ class Email(db.Model):
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == "GET":
-        return render_template("landing_page.html", email=Email.query.all())
+        return render_template("index.html", email=Email.query.all())
 
     email = Email(content=request.form['contents'])
     db.session.add(email)
