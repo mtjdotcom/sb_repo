@@ -54,13 +54,9 @@ def index():
 #     db.session.commit()
 #     return redirect(url_for('thanks'))
 
-@app.route('/feedback_home')
-def feedback_home():
-    return render_template('feedback_home.html')
-
-@app.route('/feedback_business')
-def feedback_business():
-    return render_template('feedback_business.html')
+@app.route('/feedback')
+def feedback():
+    return render_template('feedback.html')
 
 @app.route('/thank_you')
 def thanks():
