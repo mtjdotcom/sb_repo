@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SafeBlanket Landing Page</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='css/main.css')}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    <div>
+        <!-- Title -->
+        <div class="row py-8 light-pink">
+            <div class="container">
+                <div class="col-sm-12 col-12">
+                    <h1 class="text-center display-2 dark-pink">SafeBlanket</h1>
+                    <div class="text-center tagline">The safe way to wrap and comfort your loved ones</div>
+                </div>
+            </div><!--  end container -->
+        </div>
+        <!-- Origin -->
+        <div>
+            <div class="container d-flex py-5">
+                <div class="col-sm-6 col-12 align-items-center">
+                    <h2 class="display-5 py-3">Origin</h2>
+                    <p class="lead">As a nurse in a leading psychiatric facility, I care for combative patients on a daily basis. Our hospital has experimented with various methods of restraint but each has its own drawbacks.</p>
+                    <p class="lead">SafeBlanket was born out of a need to safely restrain and de- escalate dangerous situations. It’s a tool that we use multiple times a day, often at the request of patients who report feeling more calm and less anxious after being wrapped.</p>
+                    <p class="lead">Parents often ask me what techniques they can use to comfort their child at home. That’s when I realized that the benefits of SafeBlanket could extend beyond a hospital setting.</p>
+                </div>
+                <div class="col-sm-6 col-12">
+                    <img src="static/images/evan.jpg">
+                </div>
+            </div> <!-- container end -->
+        </div> <!-- row end -->
+        <!-- What is SafeBlanket -->
+        <div>
+            <div class="container d-flex py-5">
+                <div class="col-sm-6 col-12">
+                    <img src="static/images/blanket_illustration.png">
+                </div>
+                <div class="col-sm-6 col-12">
+                    <h2 class="display-5 py-3">What is SafeBlanket</h2>
+                    <div class="pb-4">
+                        <h3 class="dark-pink display-6">Triple-Stitched Cotton Canvas</h3>
+                        <p class="lead">Durable enough to withstand combative episodes but gentle enough to comfortably wrap your loved ones</p>
+                    </div>
+                    <div class="pb-4">
+                        <h3 class="dark-pink display-6">36 Handles</h3>
+                        <p class="lead">Provides you the flexibility to hold the blanket in multiple orientations, strong enough to lift children or adults</p>
+                    </div>
+                    <div class="pb-4">
+                        <h3 class="dark-pink display-6">Machine Washable & Anti-Microbial</h3>
+                        <p class="lead">When you are done, just throw it in the laundry. The construction and material means that you can wash it as many times as you want</p>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- row end -->
+        <!-- Why SafeBlanket -->
+        <div class="row py-5">
+            <div class="container">
+                <div class="col-sm-12 col-12">
+                    <h2 class="text-center display-5 py-3">Why SafeBlanket is Unique</h2>
+                    <p class="lead">Individuals with autism spectrum disorder (ASD) have a hard time understanding where they are in time and space. Unlike weighted-blankets, SafeBlanket is designed to be tightly rolled to create an enclosed space that creates a feeling of security, stability and body awareness. This “blanket-wrap” technique has been shown to reduce anxiety and stress for individuals with tactile needs.</p>
+                </div>
+            </div>  <!-- container end -->
+        </div>  <!--  row end -->
+        <!-- Get Involved -->
+        <div class="row py-5 light-pink">
+            <div class="container">
+                <div class="col-sm-12 col-12">
+                    <h2 class="text-center display-5 py-4">Get Involved</h2>
+                    <p class="lead">In order to translate SafeBlanket from hospital to home use, we need your help. We want to hear from you: parents, caretakers, and anyone that has to take care of X on a daily basis. We need your insight and experience to make SafeBlanket a convenient and indispensable tool that everyone can use.</p>
+                    <div class="input-group py-4">
+                        {% for email in emails %}
+                            <div class="row">
+                                {{ email.content }}
+                            </div>
+                        {% endfor %}
+                        <form action="." method="POST" class="input-group">
+                            <input type="email" class="form-control" name='contents' placeholder="please drop your email here" aria-label="email" aria-describedby="button-addon2">
+                            <div class='input-group-append'>
+                                <button type="submit" id="button-addon2" value="Post email" class="btn btn-primary">Keep Me Updated</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- container end -->
+        </div> <!--  row end -->
+    </div>
+    </body>
+</html>
